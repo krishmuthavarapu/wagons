@@ -1,0 +1,59 @@
+.mbar li {
+    cursor: pointer;
+  }
+  .mbar li a:after,
+.mbar li a:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #cb2626;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.mbar a:after {
+    left: 0;
+    top: 20px;
+}
+
+.mbar a:before {
+    right: 0;
+    bottom: 20px;
+}
+
+.mbar li.active a:after,
+.mbar li.active a:before,
+.mbar li:hover a:after,
+.mbar li:hover a:before {
+    width: 50% ;
+}
+
+li {
+    outline: none !important;
+}
+.mobile-button, .navbar-toggler{
+    display: none;
+}.desk-view{
+    display: block;
+}
+/* @media screen and (max-width: 600px) {
+    .menubar a:not(:first-child) {display: none;}
+    .menubar a.icon {
+      float: right;
+      display: block;
+    }
+  } */
+  
+  @media screen and (max-width: 991px) {
+    .mobile-navigation{
+        display: block !important
+    }
+    .desk-view, .menubar{
+        display: none !important;
+    }
+    .navbar-toggler, .mobile-button{
+        display: block;
+        float: right;
+    }
+  }

@@ -1,0 +1,7 @@
+{
+  "universal": {
+    "project": "wagons",
+    "skipInstall": false,
+    "directory": "."
+  }
+}

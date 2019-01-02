@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="row">
+    <div class="table-responsive col-lg-12 col-xs-12 col-md-12 col-sm-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th colspan="7"><b>Student Result Board</b></th>
+          </tr>
+        </thead>
+        <thead>
+          <tr>
+            <th [class.active]="order === 'name'" (click)="setOrder('rollNumber')"><b><i>Roll Number</i></b><span
+                [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'name'" (click)="setOrder('name')"><b><i>Name</i></b><span [hidden]="reverse">▼</span><span
+                [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'name'" (click)="setOrder('marks.Maths')"><b><i>Maths</i></b><span [hidden]="reverse">▼</span><span
+                [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'name'" (click)="setOrder('marks.English')"><b><i>English</i></b><span
+                [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'name'" (click)="setOrder('marks.Science')"><b><i>Science</i></b><span
+                [hidden]="reverse">▼</span><span [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'name'" (click)="setOrder('total')"><b><i>Total</i></b><span [hidden]="reverse">▼</span><span
+                [hidden]="!reverse">▲</span></th>
+            <th [class.active]="order === 'name'" (click)="setOrder('status')"><b><i>status</i></b><span [hidden]="reverse">▼</span><span
+                [hidden]="!reverse">▲</span></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let detail of details | orderBy: order:reverse:'case-insensitive' ">
+          <tr class="{{ detail.status }}">
+            <td>{{detail.rollNumber}}</td>
+            <td>{{detail.name}}</td>
+            <td>{{detail.marks.Maths}}</td>
+            <td>{{detail.marks.English}}</td>
+            <td>{{detail.marks.Science}}</td>
+            <!-- <td >{{detail.marks.Maths + detail.marks.English + detail.marks.Science}}</td> -->
+            <td>{{ detail.total | orderBy}}</td>
+            <td>{{ detail.status | titlecase }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<kendo-grid [kendoGridBinding]="details" [pageSize]="5" [pageable]="true" [sortable]="true" [groupable]="true">
+  <kendo-grid-column field="name" [width]="140"></kendo-grid-column>
+  <kendo-grid-column field="rollNumber" [width]="120"></kendo-grid-column>
+  <kendo-grid-column field="marks.Maths" title="Maths" [width]="100"></kendo-grid-column>
+  <kendo-grid-column field="marks.English" title="English" [width]="130"></kendo-grid-column>
+  <kendo-grid-column field="marks.Science" title="Science" [width]="130"></kendo-grid-column>
+  <kendo-grid-column field="total" [width]="130"></kendo-grid-column>
+  <kendo-grid-column field="status" [width]="130"></kendo-grid-column>
+
+</kendo-grid>
+<div class="container-fluid" style="padding-right: 0px; padding-left: 0px;">
+
+  <canvas class="canvas" width="100%" height="500">
+    <p>Hola</p>
+  </canvas>
+
+</div>
+<div class="container">
+  <div class="bd row">
+    <div id="fly-in">
+      <div><span>Very</span>Cinematic</div>
+      <div>Fade Away<span>into the distance</span></div>
+      <div>Still Loops <span> for eternity</span></div>
+      <div><span>Just CSS</span> and HTML</div>
+      <div><span>Very</span>Cinematic</div>
+      <div>Fade Away<span>into the distance</span></div>
+      <div>Still Loops <span> for eternity</span></div>
+      <div><span>Just CSS</span> and HTML</div>
+    </div>
+  </div>
+</div>
+<!-- loading -->
+<div class="container" style="margin-top:80px;margin-bottom:80px">
+    <div class="loading">
+        <span>l</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+</div>

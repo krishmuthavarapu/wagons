@@ -1,0 +1,166 @@
+
+.page-title {
+    background: url(/assets/images/pagetitlebg.jpg) no-repeat top center / cover;
+}
+
+.page-title-layer {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 100px 0;
+}
+
+.page-title h3 {
+    font-size: 36px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.page-nav ol li a {
+    font-weight: 700;
+}
+
+.page-nav ol li {
+    display: inline-block;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-right: 30px;
+    position: relative;
+    font-weight: 300;
+    letter-spacing: 2px
+}
+
+.page-nav ol li:last-child {
+    margin-right: 0;
+}
+
+.page-nav ol li:after {
+    position: absolute;
+    content: '\f105';
+    font-family: fontawesome;
+    color: #ffcf10;
+    left: 100%;
+    top: 1px;
+    padding-left: 15px;
+    font-size: 18px;
+}
+
+.page-nav ol li:last-child:after {
+    padding-left: 0;
+    content: '';
+}
+
+.page-nav ol li,
+.page-nav ol li a {
+    color: #fff;
+}
+.faq-bg{
+    background: #fff;
+}
+.blog-bg{
+    background: #FAFAFA;
+}
+
+
+
+
+
+/*==================== (04). End about us page ====================*/
+
+
+/*==================== (05). Start Faq page ====================*/
+
+.faq-page{
+    padding-bottom: 0;
+}
+.faq img {
+    position: relative;
+    bottom: 0;
+    width: 443px;
+    margin-left: auto;
+    display: table;
+}
+
+
+
+
+/*==================== (05). End Faq page ====================*/
+
+
+/*==================== (06). start blog page ====================*/
+
+
+/*------------ Start pagination ------------*/
+
+.blog-pagination {
+    margin: 20px 0 30px;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+    border-radius: 0;
+}
+
+.blog-pagination .page-link {
+    height: 35px;
+    width: 35px;
+    line-height: 38px;
+    text-align: center;
+    padding: 0;
+    margin: 0 1px;
+    color: #fff;
+    background: #212121;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.blog-pagination .page-item:first-child .page-link {
+    margin-left: 0;
+}
+
+.blog-pagination .page-item:last-child .page-link {
+    margin-right: 0;
+}
+
+.page-item.pre,
+.page-item.next {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.page-item .fa {
+    font-size: 22px;
+}
+
+.page-item.pre:after,
+.page-item.next:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    top: 0;
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    z-index: -1;
+    cursor: pointer;
+}
+
+.page-item.pre:after {
+    left: -22%;
+}
+
+.page-item.next:after {
+    left: 22%;
+}
+
+.page-item.pre:hover:after,
+.page-item.next:hover:after,
+.page-item:hover .page-link,
+.page-item.current-page .page-link {
+    background: #ffcf10;
+    color: #212121;
+}

@@ -1,0 +1,160 @@
+.pass td {color:inherit;}
+.fail td {color:red;}
+.topper td {color:green;}
+thead th {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+   th span {
+      visibility: hidden;
+    }
+  
+    thead th:active {
+      color: #000;
+    }
+     thead th:active span {
+        visibility: visible;
+      }
+    /* droppool */
+      canvas {
+        background-color: blue; 
+        width: 100%;
+        height: 500px;
+      }
+      
+      canvas {
+        display: block;
+      }
+      /* end */
+      /* fly in */
+      .bd {
+        background-color: #111;
+        background-image: radial-gradient(#333, #111);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: #fff;
+        text-align: center;
+       
+        overflow: hidden !important;
+
+        font-family: 'Montserrat', sans-serif;
+      }
+      body{
+        overflow: hidden !important;
+        width: 100vw;
+        font-weight: 700;
+      }
+      
+      #fly-in {
+        font-size: 4em;
+        margin: 40vh auto;
+        height: 20vh; 
+        text-transform: uppercase;
+      }
+      
+      #fly-in span {
+        display: block;
+        font-size: .4em;
+        opacity: .8;
+      }
+      
+      #fly-in div {
+        position: absolute;
+        margin: 2vh 0;
+        opacity: 0;
+        left: 10vw;
+        width: 80vw;
+        animation: switch 32s linear infinite;
+      }
+      
+      #fly-in div:nth-child(2) { animation-delay: 4s}
+      #fly-in div:nth-child(3) { animation-delay: 8s}
+      #fly-in div:nth-child(4) { animation-delay: 12s}
+      #fly-in div:nth-child(5) { animation-delay: 16s}
+      #fly-in div:nth-child(6) { animation-delay: 20s}
+      #fly-in div:nth-child(7) { animation-delay: 24s}
+      #fly-in div:nth-child(8) { animation-delay: 28s}
+      
+      @keyframes switch {
+          /* 0% { opacity: 0;filter: blur(20px); transform:scale(12)} */
+          3% { opacity: 1;filter: blur(0); transform:scale(1)}
+          10% { opacity: 1;filter: blur(0); transform:scale(.9)}
+          13% { opacity: 0;filter: blur(10px); transform:scale(.1)}
+          50% { opacity: 0}
+          100% { opacity: 0}
+      }
+      /* loading */
+      /* body {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #2980b9, #6dd5fa, #fff);
+        color: #fff;
+        font-family: Averia Sans Libre, Fantasy;
+      } */
+      .loading span {
+        text-transform: uppercase;
+        font-size: 4vw;
+        font-weight: 600;
+        opacity: 0;
+        display: inline-block;
+        padding: 0em 0.5em;
+        animation: letterWave 2s infinite linear;
+      }
+      .loading span:nth-child(0) {
+        animation-delay: 0ms;
+      }
+      .loading span:nth-child(1) {
+        animation-delay: 250ms;
+      }
+      .loading span:nth-child(2) {
+        animation-delay: 500ms;
+      }
+      .loading span:nth-child(3) {
+        animation-delay: 750ms;
+      }
+      .loading span:nth-child(4) {
+        animation-delay: 1000ms;
+      }
+      .loading span:nth-child(5) {
+        animation-delay: 1250ms;
+      }
+      .loading span:nth-child(6) {
+        animation-delay: 1500ms;
+      }
+      .loading span:nth-child(7) {
+        animation-delay: 1750ms;
+      }
+      .loading span:nth-child(8) {
+        animation-delay: 2000ms;
+      }
+      .loading span:nth-child(9) {
+        animation-delay: 2250ms;
+      }
+      .loading span:nth-child(10) {
+        animation-delay: 2500ms;
+      }
+      @keyframes letterWave {
+        0%, 100% {
+          transform: translateY(0) scale(1);
+          padding: 0 0.5em;
+          opacity: 0.8;
+        }
+        25% {
+          transform: translateY(-1em) scale(0.8);
+          padding: 0 0em;
+          opacity: 0.6;
+        }
+        75% {
+          transform: translateY(1em) scale(1.5);
+          padding: 0 1em;
+          opacity: 1;
+        }
+      }
+      
