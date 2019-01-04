@@ -12,6 +12,6 @@ $(window).on('scroll', function() {
 });
 
 // slicknav
-$('ul#navigation').slicknav({
-    prependTo: ".responsive-menu-wrap"
-});
+// $('ul#navigation').slicknav({
+//     prependTo: ".responsive-menu-wrap"
+// });

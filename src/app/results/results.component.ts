@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../users.service';
 import { Details } from './result';
 import { OrderPipe } from 'ngx-order-pipe';
+import { Users } from '../users';
+import { first } from 'rxjs/operators';
 // import * as drop from '/Users/LAPTOP3/Desktop/wagons in angular/wagons/src/assets/js/drop';
 declare var drop: any; //adding external js file
 // declare var main:any;
@@ -11,7 +13,8 @@ declare var drop: any; //adding external js file
   styleUrls: ['./results.component.css']
 })
 export class ResultsComponent implements OnInit {
-
+  currentUser: Users;
+  users: Users[] = [];
   order: string = 'detail.name';
   reverse: boolean = false;
   sortedCollection: any[];
@@ -22,6 +25,7 @@ export class ResultsComponent implements OnInit {
       status:string='';
     
   constructor(private _userService:UsersService,private orderPipe: OrderPipe) { 
+    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
     
     this.sortedCollection = orderPipe.transform(this.details, 'detail.name');
     console.log(this.sortedCollection);
@@ -54,8 +58,19 @@ export class ResultsComponent implements OnInit {
         detail.status=(!detail.status)?'pass':(detail.status);
       }
     }});
+    this.loadAllUsers();
 
       }
+      deleteUser(id: number) {
+        this._userService.delete(id).pipe(first()).subscribe(() => { 
+            this.loadAllUsers() 
+        });
+    }
+      private loadAllUsers() {
+        this._userService.getAll().pipe(first()).subscribe(users => { 
+            this.users = users; 
+        });
+    }
   
 
 }
