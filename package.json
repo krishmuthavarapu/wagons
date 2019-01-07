@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --proxy-config proxyconfig.json",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -11,7 +11,8 @@
     "build:server:prod": "ng run wagons:server && webpack --config webpack.server.config.js --progress --colors",
     "build:browser:prod": "ng build --prod",
     "build:prod": "npm run build:server:prod && npm run build:browser:prod",
-    "server": "node local.js"
+    "server": "node local.js",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -43,13 +44,16 @@
     "bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
     "cors": "~2.8.4",
+    "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
     "ngx-order-pipe": "^2.0.1",
     "ngx-spinner": "^6.1.2",
+    "path": "^0.12.7",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.0.0",
     "ts-loader": "4.2.0",
+    "typescript": "~3.1.1",
     "webpack-cli": "^2.1.4",
     "zone.js": "~0.8.26"
   },
@@ -62,6 +66,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
@@ -74,5 +79,9 @@
     "tslint": "~5.11.0",
     "typescript": "~3.1.1",
     "webpack": "^4.28.3"
+  },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
   }
 }

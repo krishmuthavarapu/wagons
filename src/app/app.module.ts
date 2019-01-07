@@ -27,6 +27,7 @@ import { AuthenticationService} from './services/authentication.service';
 import { AlertService } from './services/alert.service';
 import {UsersService } from './users.service';
 import { AlertComponent } from './alert/alert.component';
+import { ChildTestComponent } from './child-test/child-test.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AlertComponent } from './alert/alert.component';
     LoginComponent,
     RegisterComponent,
     AlertComponent,
+    ChildTestComponent,
 
   ],
   imports: [

@@ -13,6 +13,7 @@ import { Citi } from './citi';
 })
 export class UsersService {
   private _url: string = "/assets/data/user.json"
+  // private _url4: string = "/app/users.json"
   private _url2: string = "/assets/data/kiddos.json"
   private _url3: string = "https://api.github.com/users/hadley/orgs"
   constructor(private http: HttpClient) { }

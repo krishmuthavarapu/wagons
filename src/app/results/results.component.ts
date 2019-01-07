@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from '../users.service';
+import { UsersService } from '../users.service';
 import { Details } from './result';
 import { OrderPipe } from 'ngx-order-pipe';
 import { Users } from '../users';
 import { first } from 'rxjs/operators';
+import {ActivatedRoute, Router} from '@angular/router';
 // import * as drop from '/Users/LAPTOP3/Desktop/wagons in angular/wagons/src/assets/js/drop';
 declare var drop: any; //adding external js file
 // declare var main:any;
@@ -20,13 +21,13 @@ export class ResultsComponent implements OnInit {
   sortedCollection: any[];
 
 
-      public details=[];
-      total:number;
-      status:string='';
-    
-  constructor(private _userService:UsersService,private orderPipe: OrderPipe) { 
+  public details = [];
+  total: number;
+  status: string = '';
+
+  constructor(private _userService: UsersService, private orderPipe: OrderPipe,private router:Router,private route:ActivatedRoute) {
     this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    
+
     this.sortedCollection = orderPipe.transform(this.details, 'detail.name');
     console.log(this.sortedCollection);
     // to sort using orderpipe 
@@ -39,38 +40,41 @@ export class ResultsComponent implements OnInit {
     this.order = value;
   }
   ngOnInit() {
-  drop();
-  // main();
+    drop();
+    // main();
     this._userService.getResult()
-    .subscribe((data:any[])=>{this.details=data;if(this.details.length){
-      for(let detail of this.details){
-        let sum = 0;
-        for(let i in detail.marks){
-          sum += Number(detail.marks[i]);
-          if(!detail.status){
-            if(detail.marks[i]<20)
-            detail.status='fail'
-            else if(detail.marks[i]>=50)
-            detail.status='topper';
+      .subscribe((data: any[]) => {
+      this.details = data; if (this.details.length) {
+        for (let detail of this.details) {
+          let sum = 0;
+          for (let i in detail.marks) {
+            sum += Number(detail.marks[i]);
+            if (!detail.status) {
+              if (detail.marks[i] < 20)
+                detail.status = 'fail'
+              else if (detail.marks[i] >= 50)
+                detail.status = 'topper';
+            }
           }
+          detail.total = sum;
+          detail.status = (!detail.status) ? 'pass' : (detail.status);
         }
-        detail.total=sum;
-        detail.status=(!detail.status)?'pass':(detail.status);
       }
-    }});
+      });
     this.loadAllUsers();
 
-      }
-      deleteUser(id: number) {
-        this._userService.delete(id).pipe(first()).subscribe(() => { 
-            this.loadAllUsers() 
-        });
-    }
-      private loadAllUsers() {
-        this._userService.getAll().pipe(first()).subscribe(users => { 
-            this.users = users; 
-        });
-    }
-  
-
+  }
+  deleteUser(id: number) {
+    this._userService.delete(id).pipe(first()).subscribe(() => {
+      this.loadAllUsers()
+    });
+  }
+  private loadAllUsers() {
+    this._userService.getAll().pipe(first()).subscribe(users => {
+      this.users = users;
+    });
+  }
+  showContact(){
+    this.router.navigate(['contact'],{relativeTo: this.route});
+  }
 }
