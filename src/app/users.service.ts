@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Users } from './users';
 import { User } from './user';
-
-import { HttpClient, HttpErrorResponse } from '@angular/common/http'
+import {Car} from './car';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Details } from './results/result';
 import { Citi } from './citi';
+import { map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
+  cars: Car[];
   private _url: string = "/assets/data/user.json"
   // private _url4: string = "/app/users.json"
   private _url2: string = "/assets/data/kiddos.json"
   private _url3: string = "https://api.github.com/users/hadley/orgs"
+  private baseUrl: string = "http://localhost/backend/api/"
   constructor(private http: HttpClient) { }
   getUser(): Observable<User[]> {
     return this.http.get<User[]>(this._url)
@@ -52,5 +55,6 @@ export class UsersService {
   delete(id: number) {
     return this.http.delete(`/users/` + id);
   }
+  // cars
 
 }
