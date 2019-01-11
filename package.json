@@ -12,6 +12,7 @@
     "build:browser:prod": "ng build --prod",
     "build:prod": "npm run build:server:prod && npm run build:browser:prod",
     "server": "node local.js",
+    "preinstall": "npm install -g angular-cli",
     "postinstall": "ng build --aot -prod"
   },
   "private": true,
