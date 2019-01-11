@@ -10,93 +10,93 @@
 <header class="header">
   <!-- start top header -->
   <div class="top-header">
-      <div class="container">
-          <div class="row">
-              <div class="col">
-                  <div class="top-social">
-                      <ul>
-                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col">
-                  <div class="top-time">
-                      <ul>
-                          <li><i class="fa fa-calendar"></i> sat - fri</li>
-                          <li><i class="fa fa-clock"></i> {{now | date:'shortTime'}}</li>
-                      </ul>
-                  </div>
-              </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="top-social">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            </ul>
           </div>
+        </div>
+        <div class="col">
+          <div class="top-time">
+            <ul>
+              <li><i class="fa fa-calendar"></i> sat - fri</li>
+              <li><i class="fa fa-clock"></i> {{now | date:'shortTime'}}</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
   <!-- Start site menu -->
   <div class="site-menu" id="sticky-header">
-      <div class="container">
-          <div class="row">
-              <div class="col-md-3 col-4">
-                  <a href="index.html" class="logo">
-                      <img src="../assets/images/logo.jpg" alt="" class="img-fluid">
-                  </a>
-              </div>
-              <div class="mobile-button col-8">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
-                    </button>
-              </div>
-              <div class="col-md-9 col-8">
-                  <nav class="menubar">
-                      <ul id="navigation" class="text-right d-lg-block d-none mbar">
-                          <li routerLink="/home" routerLinkActive="active" ><a >home</a></li>
-                       
-                          <li routerLink="/about" routerLinkActive="active"><a >about us</a></li>
-                          <li routerLink="/login" routerLinkActive="active"><a>Login</a></li>
-                          <li routerLink="/register" routerLinkActive="active"><a>register</a></li>
-                          <li><a href="team.html">team</a></li>
-                          <li routerLink="/admin" routerLinkActive="active"><a >Admin Panel</a></li>
-                          <li><a href="contact.html">contact</a></li>
-                      </ul>
-                  </nav>
-                 <div class="mobile-navigation" style="display:none">
-                        
-                    <div class="col-6" style="width:100% !important;max-width:100%">
-    
-                        <div class="collapse navbar-collapse" id="navbarNav">
-    
-                            <ul class="navbar-nav">
-                                <li  routerLink="/home" routerLinkActive="active" class="nav-item ">
-                                    <a class="nav-link menu active">Home </a>
-                                </li>
-                                <li  routerLink="/about" routerLinkActive="active" class="nav-item">
-                                    <a class="nav-link menu" >About us</a>
-                                </li>
-                                <li routerLink="/login" routerLinkActive="active" class="nav-item">
-                                    <a class="nav-link menu" >login</a>
-                                </li>
-                                <li routerLink="/admin" routerLinkActive="active" class="nav-item">
-                                    <a class="nav-link menu" >Admin panel</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link menu">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link menu" >Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-4">
+          <a href="index.html" class="logo">
+            <img src="../assets/images/logo.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="mobile-button col-8">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+          </button>
+        </div>
+        <div class="col-md-9 col-8">
+          <nav class="menubar">
+            <ul id="navigation" class="text-right d-lg-block d-none mbar">
+              <li routerLink="/home" routerLinkActive="active"><a>home</a></li>
 
-                 </div>
-                  
-                  <!-- <div class="responsive-menu-wrap d-lg-none d-block"></div> -->
+              <li routerLink="/about" routerLinkActive="active"><a>about us</a></li>
+              <li routerLink="/login" routerLinkActive="active"><a>Login</a></li>
+              <li routerLink="/register" routerLinkActive="active"><a>register</a></li>
+              <li><a href="team.html">team</a></li>
+              <li routerLink="/admin" routerLinkActive="active"><a>Admin Panel</a></li>
+              <li><a href="contact.html">contact</a></li>
+            </ul>
+          </nav>
+          <div class="mobile-navigation" style="display:none">
+
+            <div class="col-6" style="width:100% !important;max-width:100%">
+
+              <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav">
+                  <li routerLink="/home" routerLinkActive="active" class="nav-item ">
+                    <a class="nav-link menu active">Home </a>
+                  </li>
+                  <li routerLink="/about" routerLinkActive="active" class="nav-item">
+                    <a class="nav-link menu">About us</a>
+                  </li>
+                  <li routerLink="/login" routerLinkActive="active" class="nav-item">
+                    <a class="nav-link menu">login</a>
+                  </li>
+                  <li routerLink="/admin" routerLinkActive="active" class="nav-item">
+                    <a class="nav-link menu">Admin panel</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu">Contact</a>
+                  </li>
+                </ul>
               </div>
+            </div>
+
           </div>
+
+          <!-- <div class="responsive-menu-wrap d-lg-none d-block"></div> -->
+        </div>
       </div>
+    </div>
   </div>
 </header>
 
@@ -109,78 +109,78 @@
 <!-- footer -->
 <footer class="footer">
   <div class="top-footer">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
-                  <div class="logo">
-                      <a routerLink="home">
-                          <img src="../assets/images/logo.jpg" alt="" class="img-fluid">
-                      </a>
-                  </div>
-                  <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facilis
-                      ab iure nihil quidem. Aperiam nobis rerum facere illo asperiores.</p>
-                  <div class="footer-social">
-                      <ul class="d-flex">
-                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                          <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
-                          <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                      </ul>
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-6 mb-lg-0 mb-4">
-                  <div class="ftr-title">
-                      <h4>quick link</h4>
-                  </div>
-                  <ul class="ftr-links">
-                      <li><a href="#">Seo Services</a></li>
-                      <li><a href="#">Virtual Marketing</a></li>
-                      <li><a href="#">Content Manage</a></li>
-                      <li><a href="#">Social Media</a></li>
-                      <li><a href="#">Black hat Seo</a></li>
-                  </ul>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                  <div class="ftr-title">
-                      <h4>Recent Posts</h4>
-                  </div>
-                  <div class="post">
-                      <a href="#">Just another amazing blog post</a>
-                      <p><i class="fa fa-calendar"></i> 07 / 06 / 2018</p>
-                  </div>
-                  <div class="post">
-                      <a href="#">Just another amazing blog post</a>
-                      <p><i class="fa fa-calendar"></i> 07 / 06 / 2018</p>
-                  </div>
-                  <div class="post">
-                      <a href="#">Just another amazing blog post</a>
-                      <p><i class="fa fa-calendar"></i> 07 / 06 / 2018</p>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
-                  <div class="ftr-title">
-                      <h4>instagram post</h4>
-                  </div>
-                  <div class="ig-post">
-                      <a href="#"><img alt="" class="img-fluid"></a>
-                      <a href="#"><img  alt="" class="img-fluid"></a>
-                      <a href="#"><img  alt="" class="img-fluid"></a>
-                      <a href="#"><img alt="" class="img-fluid"></a>
-                      <a href="#"><img  alt="" class="img-fluid"></a>
-                      <a href="#"><img alt="" class="img-fluid"></a>
-                  </div>
-              </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+          <div class="logo">
+            <a routerLink="home">
+              <img src="../assets/images/logo.jpg" alt="" class="img-fluid">
+            </a>
           </div>
+          <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi facilis
+            ab iure nihil quidem. Aperiam nobis rerum facere illo asperiores.</p>
+          <div class="footer-social">
+            <ul class="d-flex">
+              <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+              <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-lg-0 mb-4">
+          <div class="ftr-title">
+            <h4>quick link</h4>
+          </div>
+          <ul class="ftr-links">
+            <li><a href="#">Seo Services</a></li>
+            <li><a href="#">Virtual Marketing</a></li>
+            <li><a href="#">Content Manage</a></li>
+            <li><a href="#">Social Media</a></li>
+            <li><a href="#">Black hat Seo</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <div class="ftr-title">
+            <h4>Recent Posts</h4>
+          </div>
+          <div class="post">
+            <a href="#">Just another amazing blog post</a>
+            <p><i class="fa fa-calendar"></i> 07 / 06 / 2018</p>
+          </div>
+          <div class="post">
+            <a href="#">Just another amazing blog post</a>
+            <p><i class="fa fa-calendar"></i> 07 / 06 / 2018</p>
+          </div>
+          <div class="post">
+            <a href="#">Just another amazing blog post</a>
+            <p><i class="fa fa-calendar"></i> 07 / 06 / 2018</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
+          <div class="ftr-title">
+            <h4>instagram post</h4>
+          </div>
+          <div class="ig-post">
+            <a href="#"><img alt="" class="img-fluid"></a>
+            <a href="#"><img alt="" class="img-fluid"></a>
+            <a href="#"><img alt="" class="img-fluid"></a>
+            <a href="#"><img alt="" class="img-fluid"></a>
+            <a href="#"><img alt="" class="img-fluid"></a>
+            <a href="#"><img alt="" class="img-fluid"></a>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
   <div class="copy-right">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-12 text-center">
-                  <p>Bug somadhan &copy; 2018. all rights reserved</p>
-              </div>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p>Bug somadhan &copy; 2018. all rights reserved</p>
+        </div>
       </div>
+    </div>
   </div>
 </footer>
